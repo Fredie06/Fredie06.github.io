@@ -5,6 +5,24 @@
 {{- end }}
 
 {{- if .IsHome }}
+
+<div class="scroll-arrow">
+  <span></span>
+</div>
+
+<div class="skill-tags">
+  <span>C</span>
+  <span>C++</span>
+  <span>RT-Thread</span>
+  <span>STM32</span>
+  <span>CAN</span>
+  <span>PID</span>
+  <span>MIT 阻抗</span>
+  <span>DM4340</span>
+  <span>M3508</span>
+  <span>IMU</span>
+</div>
+
 {{- $projects := .Site.GetPage "/projects" }}
 {{- if $projects }}
 <section id="projects" class="home-projects">
