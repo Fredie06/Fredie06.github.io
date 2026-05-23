@@ -23,6 +23,8 @@ params:
 
   profileMode:
     enabled: true
+    imageUrl: images/avatar.jpg
+    imageTitle: Fredie
     title: "Hi, I'm Fredie"
     subtitle: >
       哈工大（威海）机器人工程本科生 · RoboMaster HERO 战队
