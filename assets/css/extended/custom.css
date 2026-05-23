@@ -157,30 +157,35 @@ body::before {
   border-top: 1px solid var(--border);
 }
 
-/* 项目标题卡片化 */
+/* 项目标题 */
 .home-projects .md-content h2 {
-  font-size: 1.25rem;
-  padding: 0.9rem 1.1rem;
-  margin: 1.8rem 0 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.8rem 1.1rem;
+  margin: 2rem 0 0.6rem;
   background: var(--entry);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--accent-light);
+  border-left: 4px solid var(--accent-light);
   border-radius: 0 8px 8px 0;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  color: var(--accent);
+  transition: border-left-color 0.2s, box-shadow 0.2s;
 }
 
 .home-projects .md-content h2:hover {
   border-left-color: #06b6d4;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 16px rgba(0,0,0,0.06);
 }
 
 [data-theme="dark"] .home-projects .md-content h2:hover {
-  box-shadow: 0 2px 12px rgba(255,255,255,0.04);
+  box-shadow: 0 3px 16px rgba(255,255,255,0.04);
 }
 
-/* 项目描述缩进 */
-.home-projects .md-content h2 + p {
-  padding-left: 0.3rem;
+/* 项目描述 */
+.home-projects .md-content h2 ~ p {
+  font-size: 0.92rem;
+  color: var(--secondary);
+  line-height: 1.75;
+  padding-left: 0.2rem;
 }
 
 /* 项目专属标签 */
@@ -193,6 +198,14 @@ body::before {
   border-radius: 4px;
   font-size: 0.78rem;
   color: var(--accent-light);
+  transition: border-color 0.2s, color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.proj-tag:hover {
+  border-color: var(--accent-light);
+  color: var(--accent);
+  background: var(--entry);
+  transform: translateY(-1px);
 }
 
 /* ===== 链接 ===== */
