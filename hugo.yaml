@@ -1,6 +1,6 @@
 baseURL: https://fredie06.github.io/
 locale: zh-cn
-title: Fredie
+title: Fredie06
 theme: PaperMod
 
 params:
@@ -11,7 +11,7 @@ params:
     - name: github
       url: "https://github.com/Fredie06"
     - name: zhihu
-      url: "https://www.zhihu.com/people/your-zhihu-id"
+      url: "https://www.zhihu.com/people/benstong-"
 
   ShowReadingTime: false
   ShowShareButtons: false
@@ -24,14 +24,13 @@ params:
   profileMode:
     enabled: true
     imageUrl: images/avatar.jpg
-    imageTitle: Fredie
-    title: "Hi, I'm Fredie"
+    imageTitle: Fredie06
+    title: "Hi, I'm Fredie06"
     subtitle: >
       哈工大（威海）机器人工程本科生 · RoboMaster HERO 战队
 
       嵌入式控制 + 运动控制
 
-      目标是成为运动控制算法工程师——能推公式、能写 C++、能部署到实物上不翻车
     buttons:
       - name: 项目
         url: /projects/
