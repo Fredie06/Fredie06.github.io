@@ -8,6 +8,8 @@ params:
   disableThemeToggle: false
 
   socialIcons:
+    - name: email
+      url: "mailto:ryb1424276506@163.com"
     - name: github
       url: "https://github.com/Fredie06"
     - name: zhihu
