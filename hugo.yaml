@@ -14,6 +14,11 @@ params:
       url: "https://github.com/Fredie06"
     - name: zhihu
       url: "https://www.zhihu.com/people/benstong-"
+    - name: bilibili
+      url: "https://space.bilibili.com/266929646"
+    - name: git
+      url: "https://gitee.com/fredagain1206"
+      title: Gitee
 
   ShowReadingTime: false
   ShowShareButtons: false
@@ -32,20 +37,6 @@ params:
       哈工大（威海）机器人工程大一本科生 · RoboMaster HERO 战队
 
       嵌入式控制 + 运动控制
-
     buttons:
-      - name: 项目
-        url: /projects/
-      - name: 关于
-        url: /about/
-      - name: GitHub
-        url: https://github.com/Fredie06
-
-menu:
-  main:
-    - name: 项目
-      url: /projects/
-      weight: 10
-    - name: 关于
-      url: /about/
-      weight: 20
+      - name: 查看项目 ↓
+        url: "#projects"

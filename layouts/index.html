@@ -1,0 +1,18 @@
+{{- define "main" }}
+
+{{- if (and site.Params.profileMode.enabled .IsHome) }}
+{{- partial "index_profile.html" . }}
+{{- end }}
+
+{{- if .IsHome }}
+{{- $projects := .Site.GetPage "/projects" }}
+{{- if $projects }}
+<section id="projects" class="home-projects">
+  <div class="post-content md-content">
+    {{ $projects.Content }}
+  </div>
+</section>
+{{- end }}
+{{- end }}
+
+{{- end }}
