@@ -183,6 +183,18 @@ body::before {
   padding-left: 0.3rem;
 }
 
+/* 项目专属标签 */
+.proj-tag {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  margin: 0.15rem 0.2rem;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.78rem;
+  color: var(--accent-light);
+}
+
 /* ===== 链接 ===== */
 a {
   color: var(--accent-light);
