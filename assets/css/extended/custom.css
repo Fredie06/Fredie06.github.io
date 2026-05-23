@@ -3,18 +3,34 @@
 :root {
   --accent: #1a365d;
   --accent-light: #2c5282;
+  --accent-glow: rgba(44, 82, 130, 0.25);
 }
 
 [data-theme="dark"] {
   --accent: #90cdf4;
   --accent-light: #63b3ed;
+  --accent-glow: rgba(99, 179, 237, 0.2);
+}
+
+/* ===== 背景光晕 ===== */
+body::before {
+  content: "";
+  position: fixed;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(ellipse, var(--accent-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* ===== Profile ===== */
 .profile {
   text-align: center;
   min-height: auto;
-  padding: 3rem 0;
+  padding: 3rem 0 1rem;
 }
 
 .profile img {
@@ -22,13 +38,44 @@
   width: 140px;
   height: 140px;
   object-fit: cover;
+  box-shadow: 0 0 40px var(--accent-glow);
+  transition: box-shadow 0.3s;
 }
 
+.profile img:hover {
+  box-shadow: 0 0 60px var(--accent-glow);
+}
+
+/* 英文名渐变 + 光标 */
 .profile_inner h1 {
-  font-size: 2.2rem;
-  color: var(--accent);
+  font-size: 2.4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-light), #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
+.profile_inner h1::after {
+  content: "_";
+  color: var(--accent-light);
+  animation: cursor-blink 1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* 中文名 */
+.profile_inner > span p:first-child {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+/* 副标题 */
 .profile_inner > span {
   color: var(--secondary);
   line-height: 1.8;
@@ -36,61 +83,20 @@
   margin: 0 auto;
 }
 
-/* ===== 按钮 ===== */
-.buttons {
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-}
-
-.button {
-  background: var(--accent);
-  color: #fff !important;
-  border: none;
-  border-radius: 6px;
-  padding: 0.55rem 1.4rem;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: background 0.2s, transform 0.15s;
-}
-
-.button:hover {
-  background: var(--accent-light);
-  transform: translateY(-1px);
-}
-
-[data-theme="dark"] .button {
-  background: #2c5282;
-  color: #fff !important;
-}
-
-[data-theme="dark"] .button:hover {
-  background: #3b82f6;
-}
-
 /* ===== 社交图标 ===== */
 .social-icons {
-  margin: 0.5rem 0;
+  margin: 0.8rem 0;
 }
 
 .social-icons a {
   padding: 8px;
-  opacity: 0.65;
-  transition: opacity 0.2s;
+  opacity: 0.5;
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 .social-icons a:hover {
   opacity: 1;
-}
-
-/* ===== 链接 ===== */
-a {
-  color: var(--accent-light);
-  text-decoration: none;
-  transition: color 0.15s;
-}
-
-a:hover {
-  color: var(--accent);
+  transform: translateY(-2px);
 }
 
 /* ===== 导航栏 ===== */
@@ -102,6 +108,43 @@ a:hover {
 .home-projects {
   padding: 2rem 0 3rem;
   border-top: 1px solid var(--border);
+}
+
+/* 项目标题卡片化 */
+.home-projects .md-content h2 {
+  font-size: 1.25rem;
+  padding: 0.9rem 1.1rem;
+  margin: 1.8rem 0 1rem;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-light);
+  border-radius: 0 8px 8px 0;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.home-projects .md-content h2:hover {
+  border-left-color: #06b6d4;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+[data-theme="dark"] .home-projects .md-content h2:hover {
+  box-shadow: 0 2px 12px rgba(255,255,255,0.04);
+}
+
+/* 项目描述缩进 */
+.home-projects .md-content h2 + p {
+  padding-left: 0.3rem;
+}
+
+/* ===== 链接 ===== */
+a {
+  color: var(--accent-light);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+a:hover {
+  color: #06b6d4;
 }
 
 /* ===== 页脚 ===== */

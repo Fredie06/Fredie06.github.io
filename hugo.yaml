@@ -34,9 +34,8 @@ params:
     imageTitle: Fredie06
     title: "Hi, I'm Fredie06"
     subtitle: >
+      弗雷德再次
+
       哈工大（威海）机器人工程大一本科生 · RoboMaster HERO 战队
 
       嵌入式控制 + 运动控制
-    buttons:
-      - name: 查看项目 ↓
-        url: "#projects"
