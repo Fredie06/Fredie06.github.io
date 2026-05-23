@@ -1,40 +1,71 @@
-/* ===== Fredie 自定义配色 ===== */
-/* 黑白灰 + 深蓝点缀 */
+/* ===== Fredie 自定义样式 ===== */
 
 :root {
-  /* 主题色：深蓝（仅用于标题和强调元素） */
   --accent: #1a365d;
   --accent-light: #2c5282;
-
-  /* 代码块 */
-  --code-bg: #f0f2f5;
-
-  /* 标签 */
-  --tag-bg: #f0f2f5;
-  --tag-color: #1a365d;
 }
 
 [data-theme="dark"] {
-  --code-bg: #16213e;
-  --tag-bg: #1a1a2e;
-  --tag-color: #63b3ed;
+  --accent: #90cdf4;
+  --accent-light: #63b3ed;
 }
 
-/* ===== 导航栏 ===== */
-.nav {
-  border-bottom: 1px solid var(--border);
+/* ===== Profile 页面 ===== */
+.profile {
+  text-align: center;
 }
 
-/* ===== 首页介绍文字 ===== */
-.home-info .entry-content {
+.profile_inner h1 {
+  font-size: 2.2rem;
+  color: var(--accent);
+}
+
+.profile_inner > span {
   color: var(--secondary);
   line-height: 1.8;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ===== 按钮 ===== */
+.buttons {
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.button {
+  background: var(--accent);
+  color: #fff !important;
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.button:hover {
+  background: var(--accent-light);
+  transform: translateY(-1px);
+}
+
+[data-theme="dark"] .button {
+  background: #2c5282;
+  color: #fff !important;
+}
+
+[data-theme="dark"] .button:hover {
+  background: #3b82f6;
 }
 
 /* ===== 社交图标 ===== */
+.social-icons {
+  margin: 0.5rem 0;
+}
+
 .social-icons a {
-  transform: scale(0.85);
-  opacity: 0.7;
+  padding: 8px;
+  opacity: 0.65;
   transition: opacity 0.2s;
 }
 
@@ -43,18 +74,19 @@
 }
 
 /* ===== 链接 ===== */
-.entry-content a,
-.md-content a,
-.post-content a {
+a {
   color: var(--accent-light);
   text-decoration: none;
   transition: color 0.15s;
 }
 
-.entry-content a:hover,
-.md-content a:hover,
-.post-content a:hover {
+a:hover {
   color: var(--accent);
+}
+
+/* ===== 导航栏 ===== */
+.nav {
+  border-bottom: 1px solid var(--border);
 }
 
 /* ===== 页脚 ===== */
@@ -65,14 +97,7 @@
   padding-top: 1.5rem;
 }
 
-/* ===== 按钮 ===== */
-.button {
-  background: var(--theme);
-  border: 1px solid var(--border);
-  color: var(--content);
-}
-
-/* ===== 页面标题 ===== */
+/* ===== 文章页标题 ===== */
 .post-title {
   color: var(--accent);
 }
@@ -81,10 +106,4 @@
 .post-content h2,
 .post-content h3 {
   color: var(--accent);
-}
-
-[data-theme="dark"] .post-content h1,
-[data-theme="dark"] .post-content h2,
-[data-theme="dark"] .post-content h3 {
-  color: #63b3ed;
 }
