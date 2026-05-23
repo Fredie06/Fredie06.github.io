@@ -1,0 +1,34 @@
+baseURL: https://fredie06.github.io/
+locale: zh-cn
+title: Fredie - 机器人工程师
+theme: PaperMod
+
+params:
+  profileMode:
+    enabled: true
+    title: Fredie
+    subtitle: "哈工大（威海）机器人工程 | RoboMaster HERO 战队 | 嵌入式控制 + 运动控制"
+    imageUrl: ""
+    imageTitle: ""
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/Fredie06"
+    - name: zhihu
+      url: "https://www.zhihu.com/people/your-zhihu-id"
+
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowToc: false
+
+menu:
+  main:
+    - name: 项目
+      url: /projects/
+      weight: 10
+    - name: 关于
+      url: /about/
+      weight: 20
