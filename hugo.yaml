@@ -1,15 +1,11 @@
 baseURL: https://fredie06.github.io/
 locale: zh-cn
-title: Fredie - 机器人工程师
+title: Fredie
 theme: PaperMod
 
 params:
-  profileMode:
-    enabled: true
-    title: Fredie
-    subtitle: "哈工大（威海）机器人工程 | RoboMaster HERO 战队 | 嵌入式控制 + 运动控制"
-    imageUrl: ""
-    imageTitle: ""
+  defaultTheme: auto
+  disableThemeToggle: false
 
   socialIcons:
     - name: github
@@ -23,6 +19,16 @@ params:
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   ShowToc: false
+  ShowFullTextinRSS: true
+
+  homeInfoParams:
+    Title: "Hi, I'm Fredie"
+    Content: >
+      哈工大（威海）机器人工程本科生。
+
+      RoboMaster HERO 战队 · 嵌入式控制 + 运动控制。
+
+      目标是成为运动控制算法工程师——能推公式、能写 C++、能部署到实物上不翻车。
 
 menu:
   main:
