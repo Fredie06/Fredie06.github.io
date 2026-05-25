@@ -5,7 +5,7 @@ url: "/projects/"
 summary: projects
 ---
 
-## 四足-轮式复合移动机器人底盘
+## [四足-轮式复合移动机器人底盘](https://github.com/Fredie06/wheel-leg-climber)
 
 <span class="proj-tag">RT-Thread</span>
 <span class="proj-tag">CAN 双总线</span>
@@ -25,5 +25,3 @@ summary: projects
   <img src="/images/wheel-leg-climber.jpg" alt="四足-轮式复合移动机器人底盘" class="proj-img">
   <figcaption>机械结构非本人设计</figcaption>
 </figure>
-
-<a href="https://github.com/Fredie06/wheel-leg-climber" class="proj-gh-link" target="_blank" rel="noopener">GitHub 仓库 →</a>
